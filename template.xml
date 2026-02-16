@@ -32,7 +32,7 @@
   <Config Name="Redis" Target="REDIS_URL" Default="" Mode="" Description="redis://host:port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="HTTPS Mode" Target="COOKIE_SECURE" Default="false" Mode="" Description="Setting it to true would prevent LAN access" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Refresh Frequency" Target="FEED_REFRESH_INTERVAL_MINUTES" Default="30" Mode="" Description="Feed fetch frequency" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Please make sure that it has write access" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Web Interface" Target="2077" Default="2077" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Please make sure that it has write access" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Web Interface" Target="2077" Default="2077" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false"></Config>
   <TailscaleStateDir/>
 </Container>
