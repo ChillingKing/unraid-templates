@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>glanced-reader</Name>
+  <Repository>glanced/reader:bundled</Repository>
+  <Registry>https://hub.docker.com/r/glanced/reader/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GlancedRSS/Reader/issues</Support>
+  <Project>https://github.com/GlancedRSS/Reader</Project>
+  <Overview>Glanced Reader is a modern, self-hosted RSS reader.&#xD;
+    &#xD;
+    **Self-hosted**: Full control over your data, runs on your hardware&#xD;
+    **Auto-refresh**: Feeds update automatically, no manual checking&#xD;
+    **Folders &amp;amp; tags**: Organize your reading your way&#xD;
+    **OPML import/export**: Bring your feeds from other readers, leave when you want&#xD;
+    **Full-text search**: Find articles across all your feeds instantly
+  </Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:2077]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/GlancedRSS/Unraid/main/template.xml</TemplateURL>
+  <Icon>https://gravatar.com/userimage/277415421/c1a51f8dc9ee46753df4f0121e7cc654.jpeg?size=256</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Postgres Database" Target="DATABASE_URL" Default="" Mode="" Description="postgresql://user:password@host:port/db" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Redis" Target="REDIS_URL" Default="" Mode="" Description="redis://host:port" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="HTTPS Mode" Target="COOKIE_SECURE" Default="false" Mode="" Description="Setting it to true would prevent LAN access" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Refresh Frequency" Target="FEED_REFRESH_INTERVAL_MINUTES" Default="30" Mode="" Description="Feed fetch frequency" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Please make sure that it has write access" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Web Interface" Target="2077" Default="2077" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false"></Config>
+  <TailscaleStateDir/>
+</Container>
